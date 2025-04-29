@@ -11,33 +11,47 @@
             margin: 0;
             width: 100vw;
 
+            background-color: rgba(0, 0, 0, 0.1);
+
             display: flex;
             justify-content: center;
         }
 
         .container {
-            padding: 10px;
+            padding: 20px;
+            margin: 20px;
+
+            background-color: white;
+            border-radius: 10px;
         }
 
         .workspace {
             margin: 10px 0px;
             display: flex;
             justify-content: space-between;
-            gap: 10px;
+            gap: 20px;
         }
 
         .directory {
-            width: 300px;
+            width: 350px;
             padding: 10px;
+            background-color: lavender;
+            border-radius: 5px;
         }
 
         .area {
-            width: 300px;
+            width: 350px;
             padding: 10px;
+            background-color: lavender;
+            border-radius: 5px;
         }
 
         .list_area {
             margin-bottom: 5px;
+            padding: 10px;
+
+            background-color: snow;
+            border-radius: 5px;
         }
 
         .button_area {
@@ -47,15 +61,16 @@
         .button {
             padding: 5px 20px;
             margin-right: 5px;
+            background-color: lemonchiffon;
+            border: 0;
+            border-radius: 5px;
         }
 
         .result_area {
             margin-top: 10px;
-            min-height: 10px;
-        }
-
-        div {
-            border: 1px solid black;
+            padding: 10px;
+            background-color:thistle;
+            border-radius: 5px;
         }
 
     </style>
@@ -73,7 +88,7 @@
             </div>
             <div class="area">
                 <h3> Stash 영역 </h3>
-                <div id="stash_area"></div>
+                <div class="list_area" id="stash_area"></div>
             </div>
         </div>
         <div class="button_area">
