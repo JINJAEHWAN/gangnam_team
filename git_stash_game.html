@@ -15,7 +15,38 @@
             justify-content: center;
         }
 
+        .container {
+            padding: 10px;
+        }
 
+        .workspace {
+            padding: 10px;
+            display: flex;
+        }
+
+        .directory {
+
+        }
+
+        .area {
+
+        }
+
+        .list_area {
+
+        }
+
+        .button_area {
+
+        }
+
+        .button {
+
+        }
+
+        .result_area {
+            
+        }
 
         div {
             border: 1px solid black;
@@ -24,22 +55,24 @@
     </style>
 </head>
 <body>
-    <div>
+    <div class="container">
         <h1> Git Stash 이해하기 </h1>
         <span> 작업 중인 변경사항을 임시 저장하고 나중에 다시 적용해보세요! </span>
-        <div>
-            <h3> 작업 디렉토리 </h3>
-            <div> login.html 수정 </div>
-            <div> style.css 수정 </div>
-            <div> script.js 수정 </div>
+        <div class="workspace">
+            <div class="directory">
+                <h3> 작업 디렉토리 </h3>
+                <div class="list_area"> login.html 수정 </div>
+                <div class="list_area"> style.css 수정 </div>
+                <div class="list_area"> script.js 수정 </div>
+            </div>
+            <div class="area">
+                <h3> Stash 영역 </h3>
+            </div>
         </div>
-        <div>
-            <h3> Stash 영역 </h3>
-        </div>
-        <div>
+        <div class="button_area">
             <!-- 버튼 -->
         </div>
-        <div>
+        <div class="result_area">
             <!-- 결과창 -->
         </div>
     </div>
