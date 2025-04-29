@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            padding: 0;
+            margin: 0;
+            width: 100vw;
+
+            background-color: rgba(0, 0, 0, 0.1);
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            padding: 20px;
+            margin: 20px;
+
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .workspace {
+            margin: 10px 0px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .directory {
+            width: 350px;
+            padding: 10px;
+            background-color: lavender;
+            border-radius: 5px;
+        }
+
+        .area {
+            width: 350px;
+            padding: 10px;
+            background-color: lavender;
+            border-radius: 5px;
+        }
+
+        .list_area {
+            margin-bottom: 5px;
+            padding: 10px;
+
+            background-color: snow;
+            border-radius: 5px;
+        }
+
+        .button_area {
+
+        }
+
+        .button {
+            padding: 5px 20px;
+            margin-right: 5px;
+            background-color: lemonchiffon;
+            border: 0;
+            border-radius: 5px;
+        }
+
+        .result_area {
+            margin-top: 10px;
+            padding: 10px;
+            background-color:thistle;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Git Stash 이해하기 </h1>
+        <span> 작업 중인 변경사항을 임시 저장하고 나중에 다시 적용해보세요! </span>
+        <div class="workspace">
+            <div class="directory">
+                <h3> 작업 디렉토리 </h3>
+                <div class="list_area" onclick="move_area('login.html')"> login.html 수정 </div>
+                <div class="list_area" onclick="move_area('style.css')"> style.css 수정 </div>
+                <div class="list_area" onclick="move_area('script.js')"> script.js 수정 </div>
+            </div>
+            <div class="area">
+                <h3> Stash 영역 </h3>
+                <div class="list_area" id="stash_area"></div>
+            </div>
+        </div>
+        <div class="button_area">
+            <!-- 버튼 -->
+            <input type="button" class="button" value="모든 변경 사항 Stash" />
+            <input type="button" class="button" value="Stash 적용하기" />
+        </div>
+        <div class="result_area" id="stash_result">
+            <!-- 결과창 -->
+        </div>
+    </div>
+
+    <script>
+
+        function move_area(val) {
+            document.getElementById('stash_area').innerHTML = val + '수정';
+            document.getElementById('stash_result').innerHTML = val + '파일이 stash 되었습니다!';
+        }
+
+    </script>
+</body>
+</html>
