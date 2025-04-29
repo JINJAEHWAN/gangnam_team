@@ -20,20 +20,24 @@
         }
 
         .workspace {
-            padding: 10px;
+            margin: 10px 0px;
             display: flex;
+            justify-content: space-between;
+            gap: 10px;
         }
 
         .directory {
-
+            width: 300px;
+            padding: 10px;
         }
 
         .area {
-
+            width: 300px;
+            padding: 10px;
         }
 
         .list_area {
-
+            margin-bottom: 5px;
         }
 
         .button_area {
@@ -41,11 +45,13 @@
         }
 
         .button {
-
+            padding: 5px 20px;
+            margin-right: 5px;
         }
 
         .result_area {
-            
+            margin-top: 10px;
+            min-height: 10px;
         }
 
         div {
@@ -71,6 +77,8 @@
         </div>
         <div class="button_area">
             <!-- 버튼 -->
+            <input type="button" class="button" value="모든 변경 사항 Stash" />
+            <input type="button" class="button" value="Stash 적용하기" />
         </div>
         <div class="result_area">
             <!-- 결과창 -->
