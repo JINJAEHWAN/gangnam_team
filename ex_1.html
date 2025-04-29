@@ -18,7 +18,7 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .commit_message, .ogu, .ogu2 {
+        .kirby, .ogu, .ogu2 {
             display: flex;
             align-items: center;
             gap: 15px;
@@ -27,7 +27,7 @@
             border-radius: 10px;
             cursor: pointer;
         }
-        .commit_message {
+        .kirby {
             background-color: pink;
         }
         .ogu {
@@ -42,19 +42,14 @@
             background-color: aliceblue;
             border-radius: 5px;
         }
-        #result {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: aliceblue;
-            border-radius: 5px;
-        }
+
     </style>
 </head>
 <body>
     <div class="game-container">
         <h1>이상형 월드컵</h1>
         <p>커비와 오구, 선택해주세요! 🎮</p>
-        <div class="commit_message" id="kriby" onclick="kirby(), result()">
+        <div class="kirby" id="kriby" onclick="kirby()">
             <img src="https://i.namu.wiki/i/wXGU6DZbHowc6IB0GYPJpcmdDkLO3TW3MHzjg63jcTJvIzaBKhYqR0l9toBMHTv2OSU4eFKfPOlfrSQpymDJlA.webp" width="100px" height="100px" alt="그림1">
             <span>신난 커비</span>
         </div>
@@ -62,11 +57,11 @@
             <img src="https://i.namu.wiki/i/VxdEKDNZCp9hAW5TU5-3MZTePLGSdlYKzEZUyVLDB-Cyo950Ee19yaOL8ayxgJzEfMYfzfLcRYuwkmKEs2cg0w.webp" width="100px" height="100px" alt="그림1">
             <span>뛰는 오구 </span>
         </div>
-        <div class="commit_message" id="kirby" onclick="kirby(), result()">
+        <div class="kirby" id="kirby" onclick="kirby()">
             <img src="https://i.namu.wiki/i/VnLuiLZQ24LtE2F7tw7NrxGlBoFHAHmtNmalPnTFx3f-n4_c0SZsGX3XnDzJg7ER-HAKpQ1zcGny4Mk2EtNDkA.webp" width="100px" height="100px" alt="그림1">
             <span>재빠른 커비 </span>
         </div>
-        <div class="ogu2" id="ogu" onclick="ogu(), result()">
+        <div class="ogu2" id="ogu" onclick="ogu()">
             <img src="https://lh5.googleusercontent.com/proxy/DOSWobYbFxAQrUj1gjwdx8Bz9pnHqONT1GlT9DB6L5UjOAvXSCgrrtXg-7aYAOC0ju_xpDnfSv3PFcV5r6y_1G2EY9sGrXd6Z6NPhadm1Q" width="100px" height="100px" alt="그림1">
             <span>드럼치는 오구 </span>
         </div>
@@ -75,7 +70,6 @@
 
     <script>
         const comment = document.getElementById("comment");
-        const result = document.getElementById("result");
         let cnt_kirby = 0;
         let cnt_ogu = 0;
 
@@ -87,7 +81,7 @@
             cnt_ogu++;
             comment.innerHTML = '오구를 ' + cnt_ogu + "번 눌렀네. 고맙다 🧓";
         }
- 
+    
     </script>
 </body>
 </html>
