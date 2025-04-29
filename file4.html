@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .game-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .conflict-container {
+            background-color: #fff3e0;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .conflict-section {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .current-change {
+            background-color: #e3f2fd;
+            background-image: url('https://png.pngtree.com/png-clipart/20230504/original/pngtree-beautiful-and-cute-kitten-characters-png-image_9140563.png');
+            background-size: 200px 200px;
+        }
+        .incoming-change {
+            background-color: #fce4ec;
+            background-image: url('https://png.pngtree.com/png-vector/20230221/ourmid/pngtree-cute-dog-illustration-png-image_6612076.png');
+            background-size: 200px 200px;
+        }
+        .option-button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #2196f3;
+            color: white;
+            margin: 5px;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #E8F5E9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Git 머지 충돌 해결하기</h1>
+        <span>아래의 머지 충돌을 해결해보세요!</span>
+        <div class="conflict-container">
+            <div class="conflict-section current-change">
+                <h4>현재 변경사항 (main 브랜치)</h6>
+                <pre>
+                    function calculateTotal(items) {
+                        let total =0;
+                        for (let item of items){
+                            total += item.price;
+                        }
+                        return total;
+                    }
+                </pre>
+    
+            </div>
+            <div class="conflict-section incoming-change">
+                <h4>들어오는 변경사항 (feature 브랜치)</h6>
+                    <pre>
+                        function calculateTotal(items) {
+                            let total = 0;
+                            for (let item of items) {
+                                total += item.price * (1 + item.tax);
+                            }
+                            return total;
+                        }
+                    </pre>
+            </div>
+            <div>
+                <input type="button" value="현재 변경사항 유지" onclick="abc1()"/>
+                <input type="button" value="들어오는 변경사항 적용" onclick="abc2()"/>
+                <input type="button" value="두 변경사항 병합" onclick="abc3()"/>
+            </div>
+    
+            <div id="result">
+                <span id="span1">
+                    
+                </span>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script>
+        const span1 = document.getElementById('span1');
+
+        function abc1(){
+            span1.innerText = "현재 변경사항을 유지했습니다. 세금 계산이 포함되지 않습니다.";
+        }
+        function abc2(){
+            span1.innerText="들어오는 변경사항을 적용했습니다. 세금 계산이 포함됩니다.";
+        } 
+        function abc3(){
+            span1.innerText="두 변경사항을 병합했습니다.";
+        }
+    </script>
+</body>
+</html>
