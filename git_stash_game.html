@@ -55,7 +55,7 @@
         }
 
         .button_area {
-
+            margin: 15px 0px;
         }
 
         .button {
@@ -88,11 +88,10 @@
             </div>
             <div class="area">
                 <h3> Stash 영역 </h3>
-                <div class="list_area" id="stash_area"></div>
+                <div id="stash_area"></div>
             </div>
         </div>
         <div class="button_area">
-            <!-- 버튼 -->
             <input type="button" class="button" value="모든 변경 사항 Stash" />
             <input type="button" class="button" value="Stash 적용하기" />
         </div>
@@ -104,7 +103,11 @@
     <script>
 
         function move_area(val) {
-            document.getElementById('stash_area').innerHTML = val + '수정';
+            const stash_list = document.getElementById('stash_area')
+            const add_list = document.createElement('div');
+            add_list.className = 'list_area';
+            add_list.textContent = val + ' 수정';
+            stash_list.appendChild(add_list);
             document.getElementById('stash_result').innerHTML = val + '파일이 stash 되었습니다!';
         }
 
